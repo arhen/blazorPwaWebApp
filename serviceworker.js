@@ -48,7 +48,7 @@ self.addEventListener('install', function (e) {
     e.waitUntil(
         caches.open(cacheName).then(function (cache) {
             console.log('[ServiceWorker] telah caching files');
-            return cache.addAll(filesToCache).addAll(filesToCache)
+            return cache.addAll(filesToCache).
                 .then(() => console.log('Asset telah dicaching'))
                 .catch(err => console.log('Error saat caching', err));
         })
