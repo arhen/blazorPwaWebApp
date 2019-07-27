@@ -10,6 +10,7 @@ var filesToCache = [
     './css/open-iconic/font/fonts/open-iconic.woff',
     //Blazor framework
     './_framework/blazor.webassembly.js',
+    './_framework/blazor.server.js',
     './_framework/blazor.boot.json',
     //Our additional files
     './manifest.json',
@@ -19,18 +20,28 @@ var filesToCache = [
     //The web assembly/.net dll's
     './_framework/wasm/mono.js',
     './_framework/wasm/mono.wasm',
-    './_framework/_bin/Microsoft.AspNetCore.Blazor.Browser.dll',
     './_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
+    './_framework/_bin/Microsoft.AspNetCore.Blazor.Components.Browser.dll',
+    './_framework/_bin/Microsoft.AspNetCore.Blazor.Components.dll',
+    './_framework/_bin/Microsoft.AspNetCore.Metadata.dll',
+    './_framework/_bin/Microsoft.Bcl.AsyncInterfaces.dll',
     './_framework/_bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll',
     './_framework/_bin/Microsoft.Extensions.DependencyInjection.dll',
+    './_framework/_bin/Microsoft.Extensions.Logging.Abstractions.dll',
+    './_framework/_bin/Microsoft.Extensions.Options.dll',
+    './_framework/_bin/Microsoft.Extensions.Primitives.dll',
     './_framework/_bin/Microsoft.JSInterop.dll',
+    './_framework/_bin/Mono.Security.dll',
+    './_framework/_bin/Mono.WebAssembly.Interop.dll',
     './_framework/_bin/mscorlib.dll',
     './_framework/_bin/System.Net.Http.dll',
     './_framework/_bin/Mono.WebAssembly.Interop.dll',
     './_framework/_bin/System.dll',
+    './_framework/_bin/System.Buffers.dll',
+    './_framework/_bin/System.ComponentModel.Annotations.dll',
     './_framework/_bin/System.Core.dll',
     //The compiled project .dll's
-    './_framework/_bin/DotnetPwaSample.dll'
+    './_framework/_bin/blazorPwaWebApp.dll'
 ];
 
 self.addEventListener('install', function (e) {
