@@ -1,7 +1,6 @@
 console.log("This is service worker talking!");
 var cacheName = 'blazor-pwa-web-app';
 var filesToCache = [
-    '',
     //Html and css files
     'index.html',
     'css/site.css',
@@ -48,9 +47,8 @@ self.addEventListener('install', function (e) {
     console.log('[ServiceWorker] Sudah terinstall');
     e.waitUntil(
         caches.open(cacheName).then(function (cache) {
-            // console.log('[ServiceWorker] telah caching files');
-            return cache
-                .addAll(filesToCache)
+            console.log('[ServiceWorker] telah caching files');
+            return cache.addAll(filesToCache).addAll(filesToCache)
                 .then(() => console.log('Asset telah dicaching'))
                 .catch(err => console.log('Error saat caching', err));
         })
